@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS làm quạt quay */
+        #fan {
+            width: 300px;                  /* giữ kích thước */
+            animation: spin 2s linear infinite; /* quay đều */
+            transform-origin: 50% 50%;     /* quay quanh tâm ảnh */
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="box">Xin chao</h1>
+    <div id="devine">ABC</div>
+    <img id="fan" src="fan.png" alt="fan.png"/>
+    
+    <script type="text/javascript" src="js/demo2.js"></script>
+</body>
+</html>
