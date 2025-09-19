@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>DT Wine — Header & Footer</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fdf6e9;
+      --deep:#3e2723;
+      --accent:#d4af37;
+      --muted:#6f625a;
+      --container:1150px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:#222;
+    }
+    .container{max-width:var(--container);margin:0 auto;padding:0 24px}
+
+    /* ---------- HEADER ---------- */
+    header.site-header{background:#fff;border-bottom:1px solid rgba(0,0,0,0.06);position:sticky;top:0;z-index:60}
+    .header-row{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo-crest{width:56px;height:56px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#7f4a2a);box-shadow:0 8px 22px rgba(0,0,0,0.08)}
+    .brand-name{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--deep);display:block}
+    .brand-sub{font-size:12px;color:var(--muted);display:block}
+    nav.main-nav{flex:1;display:flex;justify-content:center}
+    nav.main-nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
+    nav.main-nav a{font-family:'Cormorant Garamond',serif;text-decoration:none;color:#473d39;font-size:15px;padding:6px 4px;transition:.2s}
+    nav.main-nav a:hover{color:var(--accent);transform:translateY(-2px)}
+    .header-actions{display:flex;align-items:center;gap:10px}
+    .icon-btn{display:inline-grid;place-items:center;width:36px;height:36px;border:none;background:transparent;cursor:pointer}
+    .cart-count{background:var(--accent);color:var(--deep);padding:2px 6px;border-radius:999px;margin-left:6px;font-weight:700;font-size:12px}
+
+    /* ---------- FOOTER ---------- */
+    footer.site-footer{background:var(--bg);padding:56px 0 30px;border-top:1px solid rgba(0,0,0,0.04)}
+    .footer-top{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;max-width:var(--container);margin:0 auto;padding:0 24px}
+    .footer-top h4{font-family:'Cormorant Garamond',serif;font-size:18px;margin-bottom:12px;color:var(--deep)}
+    .footer-top ul{list-style:none;padding:0;margin:0}
+    .footer-top li{margin:8px 0}
+    .footer-top a{color:#392f2b;text-decoration:none;font-size:14px}
+    .footer-top a:hover{color:var(--accent)}
+    .footer-bottom{max-width:var(--container);margin:28px auto 0;padding:0 24px;border-top:1px solid rgba(0,0,0,0.04);padding-top:20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .socials{display:flex;align-items:center;gap:14px}
+
+    /* Store Location Section */
+    #location-section{display:none;padding:40px 0;background:#fff;margin-top:20px;border-top:2px solid var(--accent)}
+    #location-section iframe{width:100%;height:400px;border:0;border-radius:8px}
+    #close-location{margin-top:10px;padding:8px 14px;background:var(--accent);color:#fff;border:none;border-radius:6px;cursor:pointer}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#">
+        <div class="logo-crest">
+          <svg viewBox="0 0 64 64" width="42" height="42"><rect width="64" height="64" rx="8" fill="#2e1712"/><text x="50%" y="55%" font-family="Cormorant Garamond, serif" font-size="22" fill="#fff" text-anchor="middle">DT</text></svg>
+        </div>
+        <div>
+          <span class="brand-name">DT Wine</span>
+          <span class="brand-sub">Selected premium wines</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Collection</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Our Wines</a></li>
+          <li><a href="#">Tour & Tasting</a></li>
+          <li><a href="#">Restaurant</a></li>
+          <li><a href="#" onclick="showLocation()">Store Location</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" title="Search">🔍</button>
+        <button class="icon-btn" title="Account">👤</button>
+        <button class="icon-btn" title="Cart">🛒<span class="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main style="min-height:420px"></main>
+
+  <!-- Store Location (hidden) -->
+  <section id="location-section" class="container">
+    <h2>Our Store Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086914321593!2d-122.41941508468198!3d37.77492927975944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085816c06e27c73%3A0x9f4a0e8b3f4d6c33!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v1614700000000"></iframe>
+    <button id="close-location" onclick="hideLocation()">Close Map</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top container">
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Shipping Details</a></li>
+          <li><a href="#" onclick="showLocation()">Store Location</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Information</h4>
+        <ul>
+          <li><a href="#">Orders & Returns</a></li>
+          <li><a href="#" onclick="showLocation()">Store Location</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="socials">
+        <a href="#">Fb</a><a href="#">Ig</a><a href="#">Tw</a>
+      </div>
+      <div>&copy; 2025 DT Wine</div>
+    </div>
+  </footer>
+
+  <script>
+    function showLocation(){
+      const sec=document.getElementById("location-section");
+      sec.style.display="block";
+      sec.scrollIntoView({behavior:"smooth"});
+    }
+    function hideLocation(){
+      document.getElementById("location-section").style.display="none";
+    }
+  </script>
+</body>
+</html>
