@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>B2B Demo Experience – Landing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/landing.css" />
+</head>
+<body>
+  <div class="announce">Discover the self‑serve experience from your buyer’s perspective</div>
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-left">
+        <div class="logo" onclick="location.href='index.html'" style="cursor:pointer">
+          <span class="logo-mark">S</span><span class="logo-text">shopify</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#" class="badge">B2B DEMO STORE</a>
+          <a href="shop.html">Shop</a>
+          <a href="#">B2B Features</a>
+          <a href="#">Exit Demo</a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <button class="btn small ghost" onclick="alert('Demo – no backend')">Get in touch</button>
+        <div class="select">United States | USD $</div>
+        <button class="icon-btn" aria-label="Search">🔍</button>
+        <a class="icon-btn" aria-label="Cart" href="cart.html">🛒</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-media"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">B2B DEMO EXPERIENCE</div>
+        <h1>Unlock the full B2B demo store</h1>
+        <p class="sub">
+          Register to experience the power of personalized storefronts, self‑serve purchasing and automated workflows.
+        </p>
+        <p class="sub small">Returning to the B2B demo store? Log in from your welcome email.</p>
+        <div style="margin-top:18px">
+          <a class="btn primary" href="shop.html">Go to shop</a>
+        </div>
+      </div>
+
+      <aside class="form-card" role="complementary" aria-label="Access form">
+        <div class="form-inner">
+          <h2>Get access to the demo store</h2>
+          <p class="muted">Our self‑serve portal instantly creates a personalized demo store with just a few details.</p>
+
+          <form onsubmit="event.preventDefault(); alert('Submitted! (demo)')">
+            <div class="grid two">
+              <label>First name<input required></label>
+              <label>Last name<input required></label>
+            </div>
+            <label>Business Email<input type="email" required></label>
+            <div class="grid two">
+              <label class="phone">
+                <span>Business Phone</span>
+                <div class="phone-wrap">
+                  <select aria-label="Country code"><option>+1</option><option>+65</option><option>+84</option></select>
+                  <input inputmode="tel" placeholder="+1" required>
+                </div>
+              </label>
+              <label>Company<input required></label>
+            </div>
+            <label>Website URL<input placeholder="https://"></label>
+            <div class="grid two">
+              <label>Country
+                <select required><option>United States</option><option>Vietnam</option><option>Singapore</option></select>
+              </label>
+              <label>Annual online revenue
+                <select><option>—</option><option>&lt; $1M</option><option>$1M–$10M</option><option>$10M+</option></select>
+              </label>
+            </div>
+            <button class="btn primary full">Submit</button>
+            <p class="tiny muted">By submitting this form, you agree to receive messages about products and services. You can unsubscribe at any time.</p>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span id="year"></span> Demo Co.</span>
+      <span>Sample landing (education use)</span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

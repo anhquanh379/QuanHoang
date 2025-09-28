@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand" onclick="location.href='index.html'">Demo Experience</div>
+      <nav class="nav">
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart <span class="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="layout" style="margin-top:16px">
+      <div>
+        <section class="section">
+          <h2>Buyer information</h2>
+          <div class="grid two">
+            <div><label class="label">Full name</label><input id="fullName" class="input"></div>
+            <div><label class="label">Email</label><input id="email" class="input" type="email"></div>
+            <div><label class="label">Phone</label><input id="phone" class="input" type="tel"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Shipping address</h2>
+          <div class="grid two">
+            <div style="grid-column:1/-1"><label class="label">Address</label><input id="address1" class="input"></div>
+            <div><label class="label">City</label><input id="city" class="input"></div>
+            <div><label class="label">State/Province</label><input id="state" class="input"></div>
+            <div><label class="label">Postal code</label><input id="zip" class="input"></div>
+            <div><label class="label">Country</label><input id="country" class="input"></div>
+          </div>
+          <div class="line"></div>
+          <div class="grid two">
+            <label><input type="radio" name="shipping" value="standard" checked> Standard (3–5 days) – $15.00</label>
+            <label><input type="radio" name="shipping" value="express"> Express (1–2 days) – $30.00</label>
+            <label><input type="radio" name="shipping" value="pickup"> Store pickup – Free</label>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Payment method</h2>
+          <div>
+            <label><input type="radio" name="payment" value="card" checked> Credit/Debit card</label>
+            <div id="cardFields" class="grid two" style="margin-top:8px">
+              <div style="grid-column:1/-1"><label class="label">Card number</label><input id="cardNumber" class="input" placeholder="4111 1111 1111 1111"></div>
+              <div><label class="label">Name on card</label><input id="cardName" class="input"></div>
+              <div><label class="label">Exp</label><input id="exp" class="input" placeholder="MM/YY"></div>
+              <div><label class="label">CVC</label><input id="cvc" class="input" placeholder="123"></div>
+            </div>
+            <label><input type="radio" name="payment" value="cod"> Cash on delivery</label>
+            <label><input type="radio" name="payment" value="bank"> Bank transfer</label>
+            <div id="bankFields" style="display:none" class="section">
+              Transfer with note: ORDER-0001
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px">
+            <a class="btn" href="cart.html">⇐ Back to cart</a>
+            <button id="placeOrder" class="btn primary">Place order</button>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <section class="section">
+          <h2>Order summary</h2>
+          <div id="summary-items" style="margin-top:8px"></div>
+          <div class="line"></div>
+          <div style="display:grid;gap:6px">
+            <div style="display:flex;justify-content:space-between"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+            <div style="display:flex;justify-content:space-between"><span>Shipping</span><span id="shippingFee">$0.00</span></div>
+            <div style="display:flex;justify-content:space-between"><span>Discount</span><span id="discount">-$0.00</span></div>
+            <div style="display:flex;justify-content:space-between;font-weight:700"><span>Total</span><span id="total">$0.00</span></div>
+            <div style="display:flex;gap:8px">
+              <input id="discountCode" class="input" placeholder="Discount code">
+              <button id="applyDiscount" class="btn">Apply</button>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="inner container"><span>© <span id="year"></span> Demo Co.</span><span>Secure checkout</span></div></footer>
+  <script src="assets/app.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

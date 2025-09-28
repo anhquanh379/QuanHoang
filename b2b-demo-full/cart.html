@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand" onclick="location.href='index.html'">Demo Experience</div>
+      <nav class="nav">
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart <span class="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <table class="table">
+        <thead><tr><th></th><th>Product</th><th>Price</th><th>Qty</th><th>Subtotal</th></tr></thead>
+        <tbody id="cart-tbody"></tbody>
+      </table>
+      <div style="display:flex;justify-content:flex-end;gap:12px;margin-top:16px">
+        <button class="btn" onclick="location.href='shop.html'">Continue shopping</button>
+        <button id="to-checkout" class="btn primary">Checkout</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="inner container"><span>© <span id="year"></span> Demo Co.</span><span>Sample storefront</span></div></footer>
+  <script src="assets/app.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand" onclick="location.href='index.html'">Demo Experience</div>
+      <nav class="nav">
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart <span class="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid products" id="product-list"></section>
+  </main>
+
+  <footer class="footer"><div class="inner container"><span>© <span id="year"></span> Demo Co.</span><span>Sample storefront</span></div></footer>
+  <script src="assets/app.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
