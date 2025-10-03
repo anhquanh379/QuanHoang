@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetFilm | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">🎬 NetFilm</a>
+            <form class="d-flex ms-auto me-3">
+                <input class="form-control form-control-sm" type="search" placeholder="Search movies...">
+            </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../html/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/movies.html">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../html/favourite.html">Favorites</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main layout -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <aside class="col-md-3 col-lg-2 mb-4">
+                <div class="list-group shadow-sm">
+                    <h6 class="list-group-item bg-dark text-white">Categories</h6>
+                    <label class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Action</label>
+                    <label class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Adventure</label>
+                    <label class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Romance</label>
+                    <label class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Documentary</label>
+                    <label class="list-group-item"><input type="checkbox" class="form-check-input me-2"> War</label>
+                    <label class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Sport</label>
+                    <label class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Musical</label>
+                    <label class="list-group-item"><input type="checkbox" class="form-check-input me-2"> Family</label>
+                </div>
+            </aside>
+
+            <!-- Content -->
+            <main class="col-md-9 col-lg-10">
+                <!-- Trailer -->
+                <div class="ratio ratio-16x9 mb-3 shadow-sm rounded">
+                    <iframe src="https://www.youtube.com/embed/nSbzyEJ8X9E" title="The Post trailer" allowfullscreen></iframe>
+                </div>
+
+                <!-- Movie Info -->
+                <article class="mb-5">
+                    <h3>The Post</h3>
+                    <p>
+                        <strong>The Post</strong> is a 2017 American political thriller film about The Washington Post and the publication of the Pentagon Papers. Directed by Steven Spielberg, starring Meryl Streep and Tom Hanks. The film depicts the
+                        struggle of journalists to publish government documents that revealed the role of the US in the Vietnam War.
+                    </p>
+                </article>
+
+                <!-- Movie Gallery -->
+                <h4 class="mb-3">Featured Movies</h4>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <img src="../img/thepost.jpg" class="card-img-top" alt="The Post" style="width: 100px;">
+                            <div class="card-body">
+                                <h6 class="card-title">The Post</h6>
+                                <p class="text-warning">⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <img src="../img/father.jpg" class="card-img-top" alt="The Godfather" style="width: 100px;">
+                            <div class="card-body">
+                                <h6 class="card-title">The Godfather</h6>
+                                <p class="text-warning">⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <img src="../img/titanic.jpg" class="card-img-top" alt="Titanic">
+                            <div class="card-body">
+                                <h6 class="card-title">Titanic</h6>
+                                <p class="text-warning">⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <img src="../img/z7078136550990_4f50d433167d98ec0bb461236e9e0953.jpg" class="card-img-top" alt="Lion King">
+                            <div class="card-body">
+                                <h6 class="card-title">Lion King</h6>
+                                <p class="text-warning">⭐⭐⭐</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="text-light mt-5">
+        <div class="container py-5">
+            <div class="row">
+                <!-- Logo + giới thiệu -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold text-warning">🎬 NetFilm</h5>
+                    <p>
+                        NetFilm mang đến cho bạn những bộ phim hay nhất từ Hollywood, Châu Á và cả điện ảnh độc lập. Xem trailer, đọc review, và khám phá kho phim đa dạng.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2 mb-4">
+                    <h6 class="fw-bold text-warning">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="../html/index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="../html/about_us.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="../html/movies.html" class="text-light text-decoration-none">Movies</a></li>
+                        <li><a href="../html/favourite.html" class="text-light text-decoration-none">Favorites</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold text-warning">Contact</h6>
+                    <ul class="list-unstyled">
+                        <li>Email: <a href="mailto:support@netfilm.com" class="text-light">support@netfilm.com</a></li>
+                        <li>Phone: +84 123 456 789</li>
+                        <li>Address: Hanoi, Vietnam</li>
+                    </ul>
+                </div>
+
+                <!-- Follow us -->
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-bold text-warning">Follow Us</h6>
+                    <a href="#" class="text-light d-block mb-1">Facebook</a>
+                    <a href="#" class="text-light d-block mb-1">Twitter</a>
+                    <a href="#" class="text-light d-block">Instagram</a>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <p class="text-center mb-0">&copy; 2025 NetFilm. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

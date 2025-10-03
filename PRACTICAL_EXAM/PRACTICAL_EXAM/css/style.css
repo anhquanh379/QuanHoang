@@ -1,0 +1,94 @@
+/* Reset cơ bản */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f8fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background: linear-gradient(90deg, #141e30, #243b55);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffcc00 !important;
+}
+
+.nav-link {
+    color: #ddd !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffcc00 !important;
+}
+
+
+/* Sidebar */
+
+.list-group-item {
+    border: none;
+    background: #fff;
+    transition: background 0.3s;
+}
+
+.list-group-item:hover {
+    background: #f0f0f0;
+}
+
+
+/* Cards */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+
+/* Footer */
+
+footer {
+    background: linear-gradient(90deg, #141e30, #243b55);
+    font-size: 0.95rem;
+}
+
+footer h5,
+footer h6 {
+    margin-bottom: 1rem;
+}
+
+footer a:hover {
+    color: #ffcc00 !important;
+}
+
+
+/* Search bar */
+
+form input {
+    border-radius: 20px;
+    padding-left: 15px;
+}
